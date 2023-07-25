@@ -1,10 +1,9 @@
 import "@/styles/globals.css";
-
 import React, { useState, useEffect } from "react";
 import { Color } from "three";
 import Nav from "./nav";
 import SmoothScroll from "./smoothScroll";
-import ElusionOp from "./ElusionOp.";
+import ElusionOp from "./ElusionOp";
 import { useRouter } from 'next/router';
 
 import { Link as ScrollLink } from "react-scroll";
