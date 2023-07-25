@@ -1,0 +1,21 @@
+{
+  "name": "reactos",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "jquery": "^3.7.0",
+    "next": "13.4.8",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-loading": "^2.0.3",
+    "react-scroll": "^1.8.9",
+    "three": "^0.154.0"
+  }
+}
