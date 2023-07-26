@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Color } from "three";
 import Nav from "./nav";
 import SmoothScroll from "./smoothScroll";
-
+import Head from "next/head";
 import { Link as ScrollLink } from "react-scroll";
 
 import 'animate.css';
@@ -144,6 +144,9 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
+    <Head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </Head>
     {isLoading ? (
       <LoadingScreen />
     ) : (

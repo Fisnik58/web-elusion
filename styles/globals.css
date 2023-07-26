@@ -229,9 +229,7 @@ p {
 }
 
 @media only screen and(max-width:500px) and (min-width: 300px) {
-  html {
-    width: 150%;
-  }
+ 
 }
 
 @media only screen and(max-width:1200px) and(min-width:300px) {
@@ -250,9 +248,7 @@ p {
   .rowww4 {
     padding-bottom: 2%;
   }
-  html {
-    width: 150%;
-  }
+
   .mdd {
     padding: 0;
   }
@@ -1045,13 +1041,6 @@ footer{
 
 
 
-.loading-screen {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Set the height to 100% of the viewport height */
-  width: 100%; /* Set the width to 100% of the viewport width */
-}
 
 .loading-screen img{
   animation: jello;
