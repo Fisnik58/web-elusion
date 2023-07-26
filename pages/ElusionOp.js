@@ -51,7 +51,7 @@ const ElusionOp = () => {
         <li className="nav-item li">
           <a className="nav-link Bozo" href="#">
             Whitepaper
-          </a>
+          </a> 
         </li>
         <li className="nav-item">
           <a
