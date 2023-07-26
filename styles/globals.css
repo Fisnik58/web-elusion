@@ -906,10 +906,6 @@ li p {
 }
 
 
-.loading-screen img{
-animation: jello;
-animation-duration: 2s;
-}
 
 
 .loading.fade-in {
@@ -1046,3 +1042,21 @@ footer{
     padding-bottom: 3%;
   }
 }
+
+
+
+.loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Set the height to 100% of the viewport height */
+  width: 100%; /* Set the width to 100% of the viewport width */
+}
+
+.loading-screen img{
+  animation: jello;
+  animation-duration: 2s;
+  max-width: 100%; /* Ensure the image doesn't exceed the viewport width */
+  height: auto; 
+  }
+  
