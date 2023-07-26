@@ -229,9 +229,7 @@ p {
 }
 
 @media only screen and(max-width:500px) and (min-width: 300px) {
-  html {
-    width: 150%;
-  }
+  
 }
 
 @media only screen and(max-width:1200px) and(min-width:300px) {
@@ -250,9 +248,7 @@ p {
   .rowww4 {
     padding-bottom: 2%;
   }
-  html {
-    width: 150%;
-  }
+ 
   .mdd {
     padding: 0;
   }
@@ -1053,3 +1049,62 @@ footer{
   }
 }
 
+@media only screen and (max-width:575px) {
+  html{
+    width: 110%;
+  }
+}
+
+@media only screen and (max-width:536px) {
+  html{
+    width: 120%;
+  }
+}
+@media only screen and (max-width:492px) {
+  html{
+    width: 130%;
+  }
+}
+
+@media only screen and (max-width:452px) {
+  html{
+    width: 140%;
+  }
+}
+@media only screen and (max-width:420px) {
+  html{
+    width: 150%;
+  }
+}
+@media only screen and (max-width:391px) {
+  html{
+    width: 160%;
+  }
+}
+@media only screen and (max-width:288px) {
+  html{
+    width: 170%;
+  }
+}
+
+@media only screen and (max-width:271px) {
+  html{
+    width: 180%;
+  }
+}
+@media only screen and (max-width:258px) {
+  html{
+    width: 190%;
+  }
+}
+
+@media only screen and (max-width:243px) {
+  html{
+    width: 200%;
+  }
+}
+@media only screen and (max-width:229px) {
+  html{
+    width: 230%;
+  }
+}
