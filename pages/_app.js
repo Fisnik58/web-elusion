@@ -3,14 +3,12 @@ import React, { useState, useEffect } from "react";
 import { Color } from "three";
 import Nav from "./nav";
 import SmoothScroll from "./smoothScroll";
-import ElusionOp from "./ElusionOp";
-import { useRouter } from 'next/router';
 
 import { Link as ScrollLink } from "react-scroll";
 
 import 'animate.css';
-import $ from 'jquery';
-import { color } from "@chakra-ui/react";
+
+
 
 
 
@@ -274,7 +272,7 @@ onClick={() => setIsNavbarOpen((prevState) => !prevState)}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <button className="btn btn-info">Buy on Pancakeswap</button>
+                      <button className="btn " style={{backgroundColor:"white",color:"purple"}}>Buy on Pancakeswap</button>
                     </a>
                   </li>
                 </ul>
