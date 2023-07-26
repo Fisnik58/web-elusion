@@ -144,11 +144,11 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-    {isLoading ? (
+    {/* {isLoading ? (
       <LoadingScreen />
     ) : (
       <div>
-        {
+        { */}
           <div className="whole-container" style={{ backgroundColor: "" }} id="home">
           <title>Elusion</title>
           <nav
@@ -681,9 +681,9 @@ onClick={() => setIsNavbarOpen((prevState) => !prevState)}
 
         </div>
      
-        }
+        {/* }
       </div>
-    )}
+    )} */}
   </>
   );
 }
