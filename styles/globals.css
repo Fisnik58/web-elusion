@@ -911,6 +911,12 @@ animation: jello;
 animation-duration: 2s;
 }
 
+.loading-screen{
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
 
 .loading.fade-in {
   opacity: 0;
@@ -1046,3 +1052,4 @@ footer{
     padding-bottom: 3%;
   }
 }
+
