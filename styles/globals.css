@@ -905,12 +905,7 @@ animation: jello;
 animation-duration: 2s;
 }
 
-.loading-screen{
 
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
 
 .loading.fade-in {
   opacity: 0;
@@ -1104,5 +1099,37 @@ footer{
 @media only screen and (max-width:229px) {
   html{
     width: 230%;
+  }
+}
+
+/* Base styles for the loading screen */
+.loading-screen {
+  height: 100vh;
+}
+
+/* Styles for screens up to 768px */
+@media (max-width: 768px) {
+  .loading-screen {
+      /* Add your responsive styles here */
+      /* For example, you can set a smaller height and center the image */
+      height: 80vh;
+  }
+}
+
+/* Styles for screens up to 480px */
+@media (max-width: 480px) {
+  .loading-screen {
+      /* Add your additional responsive styles here */
+      /* For example, you can set a smaller height and adjust the image size */
+      height: 60vh;
+  }
+}
+
+/* Styles for screens up to 300px */
+@media (max-width: 300px) {
+  .loading-screen {
+      /* Add your additional responsive styles here */
+      /* For example, you can set a smaller height and adjust the image size */
+      height: 40vh;
   }
 }
