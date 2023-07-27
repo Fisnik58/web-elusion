@@ -1106,3 +1106,17 @@ footer{
     width: 230%;
   }
 }
+
+/* Base styles for the loading screen */
+.loading-screen {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image style */
+.loading-screen img {
+  max-width: 100%;
+  height: auto;
+}
