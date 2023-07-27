@@ -14,10 +14,13 @@ import 'animate.css';
 
 function LoadingScreen() {
   return (
-    <div className="container">
-    <div className="loading-screen d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
-  <img src="/ElusionLogo.png"/>
-</div>
+    <div className="container-fluid">
+      <div className="row">
+      <div className="offset-md-5">
+      <img src="/ElusionLogo.png"/>
+      </div>
+      </div>
+  
   </div>
   );
 }
