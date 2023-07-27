@@ -988,7 +988,9 @@ animation-duration: 2s;
 }
 
 svg{
-  margin-top: 18%;
+  margin-top: 19%;
+padding-top: 3%;
+padding-bottom: 15%;
   
   
 }
@@ -1105,4 +1107,29 @@ footer{
   html{
     width: 230%;
   }
+}
+
+
+
+.cookies-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.cookies-banner p {
+  margin: 0;
+}
+
+.cookies-banner button {
+  background-color: purple;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
 }

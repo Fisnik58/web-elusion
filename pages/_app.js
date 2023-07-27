@@ -15,47 +15,55 @@ import 'animate.css';
 function LoadingScreen() {
   return (
     <div className="container">
-    <div className="loading-screen d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
-  <img src="/ElusionLogo.png"/>
+    <div className="row">
+        <div className="col-12 col-md-6 offset-md-3">
+            <div className="loading-screen d-flex justify-content-center align-items-center" style={{height:"100vh"}}>
+                <img src="/ElusionLogo0.png" className="img-fluid" alt="Elusion Logo" />
+            </div>
+        </div>
+    </div>
 </div>
-  </div>
+
   );
 }
 
-
-
+function CookiesBanner({ onAcceptCookies, onRejectCookies }) {
+  return (
+    <div className="cookies-banner">
+      <div className="cookies-content">
+        <p>
+          This website uses cookies to ensure you get the best experience.
+          By continuing to use this site, you consent to the use of cookies.
+        </p>
+        <div className="buttons-container">
+          <button onClick={onAcceptCookies}>Accept Cookies</button>
+          <button onClick={onRejectCookies}>Reject Cookies</button>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function App({ Component, pageProps }) {
+  const [cookiesAccepted, setCookiesAccepted] = useState(false);
 
+  useEffect(() => {
+    // Check if the user has already accepted cookies
+    const cookiesAcceptedStatus = localStorage.getItem("cookiesAccepted");
+    if (cookiesAcceptedStatus === "true") {
+      setCookiesAccepted(true);
+    }
+  }, []);
 
-  // const MyImage = () => {
-  //   const [isHovered, setIsHovered] = useState(false);
-  
-  //   const handleHover = () => {
-  //     setIsHovered(true);
-  //   };
-  
-  //   const handleLeave = () => {
-  //     setIsHovered(false);
-  //   };
-  // return(
-  //   <>
-  //   <div
-  //     onMouseEnter={handleHover}
-  //     onMouseLeave={handleLeave}
-  //   >
-  //     {isHovered ? (
-  //       <img src="/real-1-gif.gif" alt="Animated GIF" />
-  //     ) : (
-  //       <img src="/real11.png" alt="Static Image" />
-  //     )}
-  //   </div>
-  //   </>
-  // )
-  
-  // }
-  
+  const handleAcceptCookies = () => {
+    localStorage.setItem("cookiesAccepted", "true");
+    setCookiesAccepted(true);
+  };
 
+  const handleRejectCookies = () => {
+    localStorage.removeItem("cookiesAccepted");
+    setCookiesAccepted(false);
+  };
 
 
   const [showElusionOp, setShowElusionOp] = useState(false);
@@ -145,11 +153,23 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-    {isLoading ? (
-      <LoadingScreen />
-    ) : (
-      <div>
+      {isLoading ? (
+        <LoadingScreen />
+      ) : (
+        <>
+          {/* Render the CookiesBanner only if cookiesAccepted is false */}
+          {!cookiesAccepted && (
+            <CookiesBanner
+              onAcceptCookies={handleAcceptCookies}
+              onRejectCookies={handleRejectCookies}
+            />
+          )}
+
+<div>
         {
+
+
+
           <div className="whole-container" style={{ backgroundColor: "" }} id="home">
           <title>Elusion</title>
           <nav
@@ -654,7 +674,7 @@ onClick={() => setIsNavbarOpen((prevState) => !prevState)}
             </div>
             <div>
               <button className="button-of-footer fade-in">
-                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="20" viewBox="0 0 24 24" fill="none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="25" viewBox="0 0 24 24" fill="none">
                   <path stroke="purple" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5" d="M14.43 5.93L20.5 12l-6.07 6.07M3.5 12h16.83"></path>
                 </svg>
               </button>
@@ -684,7 +704,8 @@ onClick={() => setIsNavbarOpen((prevState) => !prevState)}
      
          }
       </div>
-    )} 
-  </>
+        </>
+      )}
+    </>
   );
 }
