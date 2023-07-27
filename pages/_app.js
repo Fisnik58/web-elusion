@@ -14,9 +14,13 @@ import 'animate.css';
 
 function LoadingScreen() {
   return (
-    <div className="loading-screen d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
-    <img src="/ElusionLogo.png"/>
-  </div>
+ <>
+  {/* //   <div className="loading-screen d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
+  //   <img src="/ElusionLogo.png"/>
+  // </div>
+   */}
+   <p>Loading...</p>
+  </>
   
   );
 }
@@ -144,11 +148,11 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-    {/* {isLoading ? (
+    {isLoading ? (
       <LoadingScreen />
     ) : (
       <div>
-        { */}
+        {
           <div className="whole-container" style={{ backgroundColor: "" }} id="home">
           <title>Elusion</title>
           <nav
@@ -681,9 +685,9 @@ onClick={() => setIsNavbarOpen((prevState) => !prevState)}
 
         </div>
      
-        {/* }
+         }
       </div>
-    )} */}
+    )} 
   </>
   );
 }
