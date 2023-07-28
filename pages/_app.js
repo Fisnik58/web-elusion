@@ -18,14 +18,12 @@ function LoadingScreen() {
     <div className="row">
         <div className="col-12 col-md-6 offset-md-3">
             <div className="loading-screen d-flex justify-content-center align-items-center" style={{height:"100vh"}}>
-                <img src="/ElusionLogo0.png" className="img-fluid" alt="Elusion Logo" />
+                <img src="/ElusionLogo.png" className="img-fluid" alt="Elusion Logo" />
             </div>
         </div>
     </div>
 </div>
-
-  );
-}
+  )}
 
 function CookiesBanner({ onAcceptCookies, onRejectCookies }) {
   return (
@@ -36,8 +34,8 @@ function CookiesBanner({ onAcceptCookies, onRejectCookies }) {
           By continuing to use this site, you consent to the use of cookies.
         </p>
         <div className="buttons-container">
-          <button onClick={onAcceptCookies}>Accept Cookies</button>
-          <button onClick={onRejectCookies}>Reject Cookies</button>
+          <button onClick={onAcceptCookies} className="cookies-button-1">Accept Cookies</button>
+          <button onClick={onRejectCookies} className="cookies-button-2">Reject Cookies</button>
         </div>
       </div>
     </div>
