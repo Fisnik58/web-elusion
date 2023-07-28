@@ -1190,3 +1190,22 @@ transition: 0.3s;
     width: 100%;
     height: 100%;
 }
+/* 
+Hello */
+
+/* @media only screen and (max-width:576px) {
+  html{
+    width: fit-content;
+  }
+}
+@media only screen and (max-width:400px) {
+  html{
+    width: fit-content;
+  }
+} */
+
+@media only screen and (max-width:576px) {
+  .loadingg{
+    display: none;
+  }
+}
