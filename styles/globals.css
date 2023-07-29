@@ -1209,3 +1209,74 @@ Hello */
     display: none;
   }
 }
+
+
+.ai-chatbot-container {
+  max-width: 1150px;
+  margin: 0 auto;
+
+  padding: 30px;
+  padding-bottom: 60px;
+}
+.chatbox {
+  height: 400px;
+  overflow-y: scroll;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: purple;
+  border: 6px solid purple;
+  display: flex;
+  flex-direction: column-reverse; /* Reverse the order of the messages */
+  
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.message {
+  background-color: #f1f1f1;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.message.ai {
+  text-align: left;
+}
+
+.message.user {
+  text-align: right;
+  background-color: #cb20ff;
+  color: white;
+  
+}
+
+.chat-form {
+  display: flex;
+}
+
+.chat-form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  
+}
+
+.chat-form button {
+  padding: 10px;
+
+  background-color: purple;
+  border: 2px solid purple;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.mx-autoh1{
+  margin: 0 auto;
+}
+.bot-h1{
+  padding-bottom: 15px;
+}

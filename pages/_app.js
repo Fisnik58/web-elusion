@@ -8,6 +8,71 @@ import { Link as ScrollLink } from "react-scroll";
 
 import "animate.css";
 
+
+const AIChatbot = () => {
+  const [inputMessage, setInputMessage] = useState("");
+  const [messages, setMessages] = useState([]);
+
+  const handleInputChange = (event) => {
+    setInputMessage(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (inputMessage.trim() !== "") {
+      // Here you can add your AI logic to process the input message and generate a response
+      const response = "ElusionBot is under maintenance.";
+
+      // Update the messages state with the new input and response
+      setMessages((prevMessages) => [
+        { type: "user", text: inputMessage },
+        { type: "ai", text: response },
+        ...prevMessages,
+      ]);
+
+      // Clear the input field
+      setInputMessage("");
+    }
+  };
+
+  return (
+    <div className="ai-chatbot-container fade-in">
+      <div className="mx-auto text-center">
+     
+      <h1 style={{color:"white"}} className="bot-h1 fade-in">ElusionBot</h1>
+     
+      </div>
+      <div className="chatbox fade-in">
+        {messages.slice().reverse().map((message, index) => (
+          <div
+            key={index}
+            className={`message ${message.type === "ai" ? "ai" : "user"}`}
+            style={{ wordWrap: "break-word" }}
+          >
+            {message.text}
+          </div>
+        ))}
+      </div>
+      <form className="chat-form fade-in" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Type your message..."
+          value={inputMessage}
+          onChange={handleInputChange}
+        />
+        <button type="submit">Send</button>
+      </form>
+      <div>
+        {/* <p className="text-center " style={{color:"purple",paddingTop:"1%"}}>
+          Developed by a team of brilliant minds at the forefront of AI technology, ElusionCat is not your ordinary chat bot. With its sophisticated language model based on GPT-3.5 architecture, it possesses the ability to comprehend and respond to human language with astonishing accuracy and naturalness. This revolutionary AI is continually learning and evolving, ensuring that it stays up-to-date and relevant in an ever-changing digital landscape.
+        </p> */}
+      </div>
+    </div>
+  );
+};
+
+
+
 function LoadingScreen() {
   return (
     <div className="container">
@@ -178,7 +243,7 @@ export default function App({ Component, pageProps }) {
                   <div className="container">
                     <a className="navbar-brand" href="#">
                       <img
-                        src="/newlogo (2) (1).png"
+                        src="/newlogo(2)(1).png"
                         width={200}
                         className="img2"
                         alt="Logo"
@@ -192,7 +257,7 @@ export default function App({ Component, pageProps }) {
                       aria-label="Toggle navigation"
                       onClick={() => setIsNavbarOpen((prevState) => !prevState)}
                     >
-                      <span className="navbar-toggler-icon white-toggler-icon"></span>
+                      <span className="navbar-toggler-icon "></span>
                     </button>
                     <div
                       className={`collapse navbar-collapse ${
@@ -450,6 +515,9 @@ export default function App({ Component, pageProps }) {
 </div>
 </div>
 </div> */}
+
+
+
                   </div>
                 </div>
 
@@ -783,6 +851,7 @@ export default function App({ Component, pageProps }) {
                   <br />
                   <br />
                   <br />
+                  <AIChatbot />
                 </div>
                 <footer>
                   <hr style={{ borderBottom: "3px solid purple" }} />
